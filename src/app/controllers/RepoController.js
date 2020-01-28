@@ -9,7 +9,7 @@ class RepoController {
 
       return res.json(githubRequest.data)
     }catch(err){
-      return res.status(400).send({error: 'Bad request'})
+      return res.status(400).send({error: 'Error to get data'})
     }
   }
 }

@@ -14,7 +14,7 @@ class UserController {
       .status(200)
       .send({data: githubRequest.data, next: `${process.env.APP_BASE_URL}/users?since=${nextSince}`})
     }catch (err){
-      return res.status(400).send({error: 'Bad request'})
+      return res.status(400).send({error: 'Error to get data'})
     }
   }
 
@@ -26,7 +26,7 @@ class UserController {
 
       return res.json(githubRequest.data)
     }catch(err){
-      return res.status(400).send({error: 'Bad request'})
+      return res.status(400).send({error: 'Error to get data'})
     }
   }
 }
